@@ -57,8 +57,8 @@
                 </div>
                 <div class="col-md-4">
                     <label for="validationServer06" class="form-label">Puesto</label>
-                    <select class="form-select" id="validationServer06" th:field="*{empleado.puesto}" required>
-                        <option selected disabled value="">Puestos...</option>
+                    <select class="form-select" id="validationServer06" th:field="*{empleado.puestos}" required>
+                        <option selected disabled  th:each="p:${puestos}" th:value="${p}" th:text="${p}" >Puestos...</option>
                         <option>Directivo</option>
                         <option>Administrativo</option>
                         <option>Otro...</option>
